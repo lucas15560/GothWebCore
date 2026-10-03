@@ -2,7 +2,7 @@
    RATLAB PRODUCTIONS — Dark Red Gothic / 2000s Web (v2)
    ========================================================= */
 
-/* Fontes: no seu original elas eram usadas mas nunca carregadas */
+/* Fontes:*/
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=UnifrakturCook:wght@700&family=VT323&display=swap");
 
 :root {
@@ -14,14 +14,14 @@
     --red-bright: #d0404c;
 
     --gray-dark: #252021;
-    --gray: #8a7f82;          /* mais claro: o antigo falhava em contraste */
+    --gray: #8a7f82;   
     --gray-light: #b3a9ac;
     --silver: #d2cacd;
     --white: #ebe5e6;
 
     --border: #5a2830;
-    --border-hi: #7a3640;     /* aresta clara do "bevel" */
-    --border-lo: #1a0a0c;     /* aresta escura do "bevel" */
+    --border-hi: #7a3640;  
+    --border-lo: #1a0a0c;
 
     --font-display: "UnifrakturCook", "Old English Text MT", cursive;
     --font-head: "Cinzel", Georgia, serif;
