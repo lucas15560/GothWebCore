@@ -2,9 +2,6 @@
    RATLAB PRODUCTIONS — Dark Red Gothic / 2000s Web (v2)
    ========================================================= */
 
-/* Fontes:*/
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=UnifrakturCook:wght@700&family=VT323&display=swap");
-
 :root {
     --black: #070506;
     --red-dark: #1b070a;
@@ -14,14 +11,14 @@
     --red-bright: #d0404c;
 
     --gray-dark: #252021;
-    --gray: #8a7f82;   
+    --gray: #8a7f82;          /* mais claro: o antigo falhava em contraste */
     --gray-light: #b3a9ac;
     --silver: #d2cacd;
     --white: #ebe5e6;
 
     --border: #5a2830;
-    --border-hi: #7a3640;  
-    --border-lo: #1a0a0c;
+    --border-hi: #7a3640;     /* aresta clara do "bevel" */
+    --border-lo: #1a0a0c;     /* aresta escura do "bevel" */
 
     --font-display: "UnifrakturCook", "Old English Text MT", cursive;
     --font-head: "Cinzel", Georgia, serif;
@@ -540,6 +537,37 @@ nav a:hover span, nav a.active span { color: var(--red-bright); }
 }
 
 .footer-symbol { margin-top: 15px; color: var(--red-light); font-size: 22px; }
+
+/* ================= TERMINAL: linhas aparecem em sequência ================= */
+.js .t-line { visibility: hidden; }
+.js .t-line.show { visibility: visible; }
+.terminal-body .t-line:nth-child(4) { margin-top: 14px; }
+
+/* ================= TICKER (faixa rolante) ================= */
+.ticker {
+    margin-top: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid var(--border);
+    background: #0c0507;
+    box-shadow: inset 1px 1px 0 var(--border-hi), inset -1px -1px 0 var(--border-lo);
+    font-family: var(--font-mono);
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: var(--red-bright);
+    padding: 3px 0;
+}
+.ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
+.ticker-track span { padding-right: 3rem; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* ================= LINK DE ACESSIBILIDADE ================= */
+.skip {
+    position: absolute; left: 10px; top: -60px; z-index: 100;
+    background: var(--red); color: #fff; padding: 8px 14px;
+    font-family: var(--font-head); font-size: 12px; text-decoration: none;
+}
+.skip:focus { top: 10px; }
 
 /* ================= RESPONSIVO ================= */
 @media (max-width: 850px) {
